@@ -1,10 +1,10 @@
 [
-  {
-    "name": "Drachenfeste",
-    "text": "Hochburg der Feuerdrachen",
-    "x": 900,
-    "y": 600
-  },
+
+  "name": "Mirewood",
+  "text": "Einst eine Sidlung im Sumpfgebiet nähe Neu Fallas",
+  "x": 398.4637,
+  "y": 845.0183
+}
   {
     "name": "Elbenwald",
     "text": "Alter, magischer Wald",
