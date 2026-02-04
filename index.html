@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Avalier</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <style>
+    html, body, #map {
+      height: 100%;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script>
+  const map = L.map('map', {
+    crs: L.CRS.Simple,
+    minZoom: -2
+  });
+
+  const width = 2000;   // später anpassen
+  const height = 1200;  // später anpassen
+
+  const bounds = [[0, 0], [height, width]];
+  L.imageOverlay('karte.jpg', bounds).addTo(map);
+  map.fitBounds(bounds);
+
+  fetch('marker.json')
+    .then(res => res.json())
+    .then(data => {
+      data.forEach(m => {
+        L.marker([m.y, m.x])
+          .addTo(map)
+          .bindPopup(`<b>${m.name}</b><br>${m.text}`);
+      });
+    });
+</script>
+
+</body>
+</html>
