@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Drachenfeste",
+    "text": "Hochburg der Feuerdrachen",
+    "x": 900,
+    "y": 600
+  },
+  {
+    "name": "Elbenwald",
+    "text": "Alter, magischer Wald",
+    "x": 400,
+    "y": 300
+  }
+]
